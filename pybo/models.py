@@ -4,6 +4,9 @@ class Question(models.Model):
     subject = models.CharField(max_length=200)      #질문의 제목
     content = models.TextField()                    #질문의 내용
     create_data = models.DateTimeField()           #질문 시각
+
+    def __str__(self):
+        return self.subject
     
     
 class Answer(models.Model):
